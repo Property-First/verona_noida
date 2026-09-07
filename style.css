@@ -34,7 +34,7 @@
             position: absolute;
             inset: -4%;
             width: 1425px;
-            height: 700px;
+            /* height: 700px; */
 
             background-image: url("./images/verona_banner.png");
             background-size: 100% 100%;
@@ -1708,7 +1708,7 @@
 
     width: 100%;
 
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
     background: #000;
 
@@ -1933,7 +1933,7 @@
 
     letter-spacing: 2px;
 
-    pointer-events: none;
+  cursor: pointer;
 
     transition: opacity .5s ease;
 }
@@ -2980,4 +2980,127 @@
         height: 46px;
         font-size: 17px;
     }
+}
+
+
+
+.footer-disclaimer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+/* SECTION TITLE (optional if you want to add heading) */
+.footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* PROJECT INFO */
+.project-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+  font-size: 13px;
+  color: #555;
+}
+
+.project-info div {
+  background: #fff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.project-info strong {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+/* BULLET LIST */
+.info-list {
+  padding-left: 18px;
+  margin-bottom: 25px;
+}
+
+.info-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.info-list strong {
+  color: #222;
+}
+
+/* DISCLAIMER */
+.disclaimer-text {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #777;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #c9a646;
+  margin-bottom: 20px;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: #3b6cb7;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #c9a646;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.divider {
+  color: #bbb;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-disclaimer {
+    padding: 20px 15px;
+  }
+
+  .project-info {
+    grid-template-columns: 1fr;
+  }
+
+  .disclaimer-text {
+    font-size: 11px;
+  }
 }

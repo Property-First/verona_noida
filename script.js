@@ -347,7 +347,7 @@ const dragIndicator =
     36.webp
 */
 
-const totalFrames = 36;
+const totalFrames = 9;
 
 
 /* Current frame */
