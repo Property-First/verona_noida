@@ -765,3 +765,42 @@ propertyScroll.addEventListener("mousemove", (e) => {
         );
 
    
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const revealElements =
+        document.querySelectorAll(".reveal");
+
+    const revealObserver =
+        new IntersectionObserver(
+            function (entries, observer) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+
+    revealElements.forEach(function (element, index) {
+
+        element.style.transitionDelay =
+            `${Math.min(index * 80, 400)}ms`;
+
+        revealObserver.observe(element);
+
+    });
+
+});
