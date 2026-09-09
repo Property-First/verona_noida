@@ -36,7 +36,7 @@
             /* width: 100%; */
             /* height: 700px; */
 
-            background-image: url("./images/verano2.png");
+            background-image: url("./images/maimi_horizontal.png");
             background-size: 100% 100%;
             background-position: center;
             background-repeat: no-repeat;
@@ -60,13 +60,25 @@
         }
 
         @media (max-width: 767px) {
-.hero-bg {
-            position: absolute;
-            inset: -4%;
-            /* width: 100%; */
-            /* height: 700px; */
 
-            /* background-image: url("./images/verano2.png"); */
+            .hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #111;
+}
+.hero-bg {
+            position: relative;
+
+        inset: auto;
+
+        width: 100%;
+
+        height: 100svh;
+        min-height: 600px;
+
+            background-image: url("./images/maimi_vertical.png");
             background-size: cover;
             background-position: 20% top;
             background-repeat: no-repeat;
@@ -76,6 +88,29 @@
 
             animation: zoomOut 5s cubic-bezier(.2,.6,.2,1) forwards;
         }
+
+
+        .hero-project-card {
+
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
+        padding: 35px 20px;
+
+        background: #111;
+
+        z-index: 3;
+
+        order: 2;
+    }
             
         }
 
@@ -91,6 +126,273 @@
 
             z-index: 1;
         }
+
+        /* =========================================
+   PAYMENT PLAN - BOTTOM LEFT
+========================================= */
+
+.hero-payment-plan {
+
+    position: absolute;
+    background: black;
+    padding: 10px;
+    border-radius: 10px;
+
+    left: 45px;
+    bottom: 45px;
+
+    z-index: 4;
+
+    color: #fff;
+
+    padding-left: 15px;
+
+    border-left: 2px solid #c9a464;
+
+}
+
+.hero-payment-plan .offer-badge {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 7px 16px;
+
+    border-radius: 30px;
+
+    background: #e5c27e;
+
+    color: #182536;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* Dot */
+
+.hero-payment-plan .offer-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #a54b32;
+}
+
+
+/* =========================================
+   20x5
+========================================= */
+
+.hero-payment-plan .payment-number {
+    margin-top: 18px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 72px;
+
+    line-height: .85;
+
+    font-weight: 400;
+
+    letter-spacing: -4px;
+
+    color: #dfb96d;
+}
+
+.hero-payment-plan .payment-number span {
+    font-size: .65em;
+
+    margin: 0 3px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.hero-payment-plan .payment-label {
+    margin-top: 12px;
+
+    color: rgba(255,255,255,.75);
+
+    font-size: 8px;
+
+    letter-spacing: 3.5px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.hero-payment-plan h2 {
+    margin: 20px 0 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    color: #fff;
+}
+
+
+/* =========================================
+   PAYMENT BREAKDOWN
+========================================= */
+
+.hero-payment-plan .payment-breakdown {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 16px;
+
+    font-style: italic;
+
+    letter-spacing: 2px;
+
+    color: #dfb96d;
+}
+
+/* Small label */
+
+.payment-label {
+
+    margin-bottom: 2px;
+
+    font-size: 36px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #c9a464;
+
+    text-transform: uppercase;
+}
+
+
+/* 20*5 */
+
+.payment-main {
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+}
+
+
+.payment-main span {
+
+    color: #c9a464;
+
+    font-size: 36px;
+
+}
+
+
+/* 20 × 20 × 20 × 20 × 20 */
+
+.payment-steps {
+
+    margin-top: 7px;
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+
+    color: rgba(255,255,255,0.75);
+
+}
+
+
+.payment-steps span {
+
+    margin: 0 3px;
+
+    color: #c9a464;
+
+}
+
+@media (max-width: 767px) {
+
+    .hero-payment-plan {
+
+        left: 50    px;
+
+        bottom: 40%;
+
+        padding-left: 12px;
+
+    }
+
+    .payment-label {
+
+        font-size: 28px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+    .payment-main {
+
+        font-size: 36px;
+
+    }
+
+    .payment-main span {
+
+        font-size: 18px;
+
+    }
+
+    .payment-steps {
+
+        font-size: 24px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+    .hero-payment-plan .offer-badge {
+        padding: 6px 13px;
+        font-size: 7px;
+    }
+
+    .hero-payment-plan .payment-number {
+        margin-top: 15px;
+        font-size: 58px;
+    }
+
+    .hero-payment-plan .payment-label {
+        margin-top: 9px;
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .hero-payment-plan h2 {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    .hero-payment-plan .payment-breakdown {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+}
 
 
         /* =========================
@@ -117,6 +419,8 @@
 
             color: white;
         }
+
+
 
 
         /* Logo */
@@ -2738,7 +3042,7 @@
 
         .phone-row {
             display: grid;
-            grid-template-columns: 80px 1fr;
+            /* grid-template-columns: 80px 1fr; */
             gap: 10px;
         }
 
@@ -4086,7 +4390,7 @@
 
         min-height: auto;
 
-        /* overflow: visible; */
+        overflow: visible;
 
     }
 
@@ -4102,7 +4406,7 @@
 
         width: calc(100% - 24px);
 
-        margin: 20px 12px 30px;
+        margin: 20px 12px 0px;
 
         padding: 24px 18px;
 

@@ -691,8 +691,8 @@ propertyScroll.addEventListener("mousemove", (e) => {
         const formContent =
             document.getElementById("formContent");
 
-        const successMessage =
-            document.getElementById("successMessage");
+        // const successMessage =
+        //     document.getElementById("successMessage");
 
 
         /* OPEN POPUP */
@@ -745,24 +745,24 @@ propertyScroll.addEventListener("mousemove", (e) => {
 
         /* FORM SUBMIT */
 
-        enquiryForm.addEventListener(
-            "submit",
-            function(e) {
+        // enquiryForm.addEventListener(
+        //     "submit",
+        //     function(e) {
 
-                e.preventDefault();
+        //         e.preventDefault();
 
 
                 /*
                    Add your PHP / API submission here.
                 */
 
+//    closePopup();
+                // formContent.style.display = "none";
 
-                formContent.style.display = "none";
+                // successMessage.style.display = "block";
 
-                successMessage.style.display = "block";
-
-            }
-        );
+        //     }
+        // );
 
    
 
@@ -804,3 +804,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+const phoneInput = document.querySelector("#phone");
+
+const iti = window.intlTelInput(phoneInput, {
+
+    initialCountry: "in",
+
+    separateDialCode: true,
+
+    preferredCountries: [
+        "in",
+        "ae",
+        "us",
+        "gb"
+    ],
+
+    loadUtils: () =>
+        import(
+            "https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"
+        )
+
+});
+

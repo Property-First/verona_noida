@@ -11,6 +11,10 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="./style.css"/>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css"
+/>
 </head>
 
 
@@ -266,7 +270,7 @@
 
             <small>STARTING FROM</small>
 
-            <strong>₹5.91 Cr<sup>*</sup></strong>
+            <strong>₹5.50 Cr<sup>*</sup></strong>
 
         </div>
 
@@ -288,6 +292,42 @@
     </button>
 
 </div>
+
+<!-- =========================
+     PAYMENT PLAN
+========================= -->
+
+
+    <!-- =========================
+     PAYMENT PLAN - LEFT BOTTOM
+========================= -->
+
+<div class="hero-payment-plan">
+
+    <div class="offer-badge">
+        <span class="offer-dot"></span>
+        LIMITED PERIOD OFFER
+    </div>
+
+    <div class="payment-number">
+        20<span>x</span>5
+    </div>
+
+    <div class="payment-label">
+        PAYMENT PLAN
+    </div>
+
+    <h2>
+        Limited Period 20x5 Payment Plan
+    </h2>
+
+    <div class="payment-breakdown">
+        20 : 20 : 20 : 20 : 20
+    </div>
+
+</div>
+
+
 </section>
 
 
@@ -1664,23 +1704,20 @@
 
                         <div class="phone-row">
 
-                            <div class="country-code">
-                                +91
-                            </div>
+    <div class="input-group">
 
-                            <div class="input-group">
+        <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Mobile Number"
+            autocomplete="tel"
+            required
+        >
 
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder="Mobile Number"
-                                    pattern="[0-9]{10}"
-                                    maxlength="10"
-                                    required>
+    </div>
 
-                            </div>
-
-                        </div>
+</div>
 
 
                         <div class="input-group">
@@ -1717,7 +1754,7 @@
 
                 <!-- SUCCESS -->
 
-                <div
+                <!-- <div
                     class="success-message"
                     id="successMessage">
 
@@ -1735,7 +1772,7 @@
                         you shortly.
                     </p>
 
-                </div>
+                </div> -->
 
             </div>
 
@@ -1782,6 +1819,6 @@
 
 </div>
     
-
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
 </body>
 </html>
